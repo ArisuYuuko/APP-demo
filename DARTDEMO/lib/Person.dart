@@ -13,6 +13,6 @@ class Person {
   Person.setInfo(this.name, this.age);
 
   void printInfo() {
-    print('${name}----${age}');
+    print('$name----$age');
   }
 }

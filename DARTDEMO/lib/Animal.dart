@@ -13,7 +13,7 @@ class Animal {
   Animal.setInfo(this._name, this.age);
 
   void printInfo() {
-    print('${_name}----${age}');
+    print('$_name----$age');
   }
 
   String getName() {
