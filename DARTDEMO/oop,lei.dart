@@ -238,11 +238,12 @@ void main() {
 ////////////////////////////////////////静态成员
 //static
 
-class Person {
-  static String name = '张三'; //静态方法可以通过类名称进行访问
+/*class Person {
+  String name = '张三'; //静态方法可以通过类名称进行访问
 
   int age = 20;
-  static void show() {
+  Person(this.name, this.age);
+  void show() {
     print(name);
   }
 
@@ -250,7 +251,33 @@ class Person {
 }
 
 void main() {
-  print(Person.name);
+  var p1;
+  p1 = ' ';
 
-  Person.show;
+  p1 = new Person('4', 10);
+  (p1 as Person).printInfo;
+}
+*/
+class Person {
+  String name = 'zhangsan';
+  num age = 20;
+
+  Person(String name, int age);
+  void printInfo() {
+    print("$name------$age");
+  }
+}
+
+class Web extends Person {
+  Web(super.name, super.age);
+}
+
+void main() {
+  Web? w;
+  w.printInfo();
+  Person p1 = Person('zahngsan', 7);
+  p1
+    ..age = 10
+    ..name = 'zhangsan';
+  p1.printInfo();
 }
